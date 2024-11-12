@@ -1,10 +1,14 @@
-name: Terraform CI/CD
+# This is a basic workflow to help validate your Terraform configuration
 
+name: Validate Infrastructure
+
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events
   push:
-     branches: 
+    branches-ignore:
       - 'main'
-     paths:
+    paths:
       - 'vannp_oblig02/**'
   workflow_dispatch:
 
