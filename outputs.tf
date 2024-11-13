@@ -33,4 +33,9 @@ output "subnet2_id" {
   value       = module.networking.subnet2_id
 }
 
+# Output for Storage Account
+output "primary_web_endpoint" {
+  description = "The primary web endpoint of the App Service"
+  value       = "https://${module.app_service.app_service_default_hostname}"
+}
 
