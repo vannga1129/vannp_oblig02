@@ -6,9 +6,9 @@ terraform {
     }
   }
   # backend "azurerm" {
-  #   resource_group_name  = "rgtfoblig02"
-  #   storage_account_name = "satfoblig02"
-  #   container_name       = "sctfoblig2l5kaxf1i"
+  #   resource_group_name  = "rgtf-oblig2"
+  #   storage_account_name = "sabetfsxv1d0"
+  #   container_name       = "tfstate"
   #   key                  = "oblig2.terraform.tfstate"
   # }
 }
