@@ -21,7 +21,7 @@ resource "random_string" "random_string" {
 
 # Create Resource Group
 resource "azurerm_resource_group" "rg" {
-  name     = local.rg_name
+  name     = "rgtf-oblig2-dev"
   location = var.location
 }
 
