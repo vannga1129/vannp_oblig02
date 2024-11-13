@@ -112,13 +112,4 @@ vannp_oblig02/
    terraform destroy
    ```
 
-**NOTES**
-- **Flexibility:** The code is designed to be flexible; changing the subscription_id or other variables should be straightforward.<br>
-- **Security:** Sensitive information is not included in the repository. Users should provide their own credentials and secrets. <br>
-- **Tools:** Installed tfsec locally for security scanning, which can be run using tfsec .. <br>
-- **Learning Experience:** Gained practical experience in setting up CI/CD pipelines with GitHub Actions, and automating Terraform deployments without manual intervention.<br>
 
-**Contact Information**
-- **Name:** Pau Sawm Tung <br>
-- **Email:** paut@stud.ntnu.no <br>
-- **NTNTU Username:** paut
