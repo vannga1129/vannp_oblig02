@@ -17,5 +17,6 @@ resource "azurerm_storage_blob" "sb" {
   storage_account_name   = azurerm_storage_account.sa.name
   storage_container_name = azurerm_storage_container.sc.name
   type                   = "Block"
-  # source                 = "some-local-file.zip"
+  content_type           = "text/html"
 }
+
