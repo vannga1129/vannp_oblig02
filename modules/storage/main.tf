@@ -4,7 +4,6 @@ resource "azurerm_storage_account" "sa" {
   resource_group_name      = var.rg_name
   account_tier             = "Standard"
   account_replication_type = "GRS"
-  min_tls_version          = "TLS1_2"  # Add this line to enforce a secure TLS version
 }
 
 resource "azurerm_storage_container" "sc" {
