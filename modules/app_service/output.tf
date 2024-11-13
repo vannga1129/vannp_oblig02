@@ -27,8 +27,8 @@ output "service_plan_os_type" {
   value       = azurerm_service_plan.sp.os_type
 }
 
-output "primary_web_endpoint" {
-  description = "The primary web endpoint of the App Service"
-  value       = "https://${module.app_service.app_service_default_hostname}"
+output "app_service_default_hostname" {
+  value = azurerm_linux_web_app.app_service.default_hostname
 }
+
 
