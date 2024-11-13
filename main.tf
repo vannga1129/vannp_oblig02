@@ -21,7 +21,7 @@ resource "random_string" "random_string" {
 
 # Create Resource Group
 resource "azurerm_resource_group" "rg" {
-  name     = "${var.rg_name}${local.workspace_suffix}"
+  name     = local.rg_name
   location = var.location
 }
 
