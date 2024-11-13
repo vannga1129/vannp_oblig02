@@ -5,6 +5,8 @@ resource "azurerm_mssql_server" "sqlserver" {
   version                      = "12.0"
   administrator_login          = "ngavanph"
   administrator_login_password = "oblig2@xxx"
+  minimum_tls_version          = "1.2"  # Specify secure TLS version
+   public_network_access_enabled = false  # Add this line to disable public access
 }
 
 resource "azurerm_mssql_database" "sqldatabase" {
