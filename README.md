@@ -67,8 +67,8 @@ vannp_oblig02/
    export ARM_SUBSCRIPTION_ID="SUBSCRIPTION_ID"
    export ARM_TENANT_ID="TENANT_ID"
    ```
-1. **Prepare Terraform Variables** <br>
-   a. Edit **terraform.tfvars** with the desired configuration.
+1. **How to run the code:** <br>
+   a. Edit **subcription_id** in providers.tf file to run the code.
 2. **Deploy the Infrastructure** <br>
    a. **Using GitHub Actions CI/CD Pipeline**
    The deployment is automated using GitHub Actions workflows.<br>
@@ -77,12 +77,9 @@ vannp_oblig02/
      - Validate code using **validate.yml** on push to any branch except **main**. <br>
      - Create a **Pull Request** to merge into environment branches **(dev, staging, prod)**.<br>
   - **CI/CD Workflows:** <br>
-    - **validate.yml**: Validates Terraform code using **terraform fmt, terraform validate**, and can be extended to include **ftflint and tfsec**, but in my case I install **tfsec**
-    - ```
-      brew install tfsec
-      ```
-      and use **tfsec** locally to enhance the security of my Terraform infrastructure as code (IaC) by identifying potential security vulnerabilities and misconfigurations in my Terraform files. <br>
-    - **devstageprodapp.yml**: On merging into environment branches, triggers deployment to the respective environment's workspace. Deploy to **prod** requires manual approval.<br>
+    - **validate.yml**: Validates Terraform code using **terraform fmt, terraform validate**.
+    - **ftflint and tfsec**, run in a seperate workflow or we can use the commando directly from the terminal
+    - **devstageprodapp.yml**: On merging into environment branches, triggers deployment to the respective environment's workspace. Deploy to **prod** requires manual approval (my/your personal email/github acc).<br>
 
     b. **Manually Applying Terraform (Alternative)**
       ```
@@ -107,7 +104,6 @@ vannp_oblig02/
    curl $(terraform output -raw app_service_hostname)
    ```
 4. **Cleanup Resources**
-   To avoid unnecessary cost, destroy the resources when they are no longer needed:
    ```
    terraform destroy
    ```
