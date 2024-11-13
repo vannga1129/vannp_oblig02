@@ -67,8 +67,7 @@ vannp_oblig02/
    export ARM_SUBSCRIPTION_ID="SUBSCRIPTION_ID"
    export ARM_TENANT_ID="TENANT_ID"
    ```
-1. **How to run the code:** <br>
-   a. Edit **subcription_id** in providers.tf file to run the code.
+1. **How to run the code:** Edit **subcription_id** in providers.tf file to run the code.
 2. **Deploy the Infrastructure** <br>
    a. **Using GitHub Actions CI/CD Pipeline**
    The deployment is automated using GitHub Actions workflows.<br>
