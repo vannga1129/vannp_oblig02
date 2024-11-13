@@ -5,12 +5,12 @@ terraform {
       version = "4.9.0"
     }
   }
-  # backend "azurerm" {
-  #   resource_group_name  = "rgtf-oblig2"
-  #   storage_account_name = "sabetfsxv1d0"
-  #   container_name       = "tfstate"
-  #   key                  = "oblig2.terraform.tfstate"
-  # }
+  backend "azurerm" {
+    resource_group_name  = "rgtf-oblig2"
+    storage_account_name = "sabetfsxv1d0"
+    container_name       = "tfstate"
+    key                  = "oblig2.terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
