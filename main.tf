@@ -29,10 +29,13 @@ resource "azurerm_resource_group" "rg" {
 module "app_service" {
   source   = "./modules/app_service"
   sp_name  = "${lower(local.sp_name)}${random_string.random_string.result}"
+  resource_group_name   = azurerm_resource_group.rg.name
   location = var.location
   rg_name  = azurerm_resource_group.rg.name
   sku_name = var.sku_name
+  app_service_name = "${var.app_service_name}${local.workspace_suffix}"
 }
+
 
 # Database Module
 module "database" {

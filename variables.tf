@@ -88,3 +88,9 @@ variable "sku_name" {
   type        = string
   default     = "B1"
 }
+
+variable "app_service_name" {
+  description = "The name of the app service."
+  type        = string
+  default     = "apptfoblig2"
+}
